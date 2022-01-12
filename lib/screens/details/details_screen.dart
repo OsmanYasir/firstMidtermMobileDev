@@ -5,7 +5,7 @@ import 'package:electronics_parts_store/models/product.dart';
 import 'package:electronics_parts_store/screens/details/components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
-  final Product product;
+  final Product? product;
 
   const DetailsScreen({key, this.product}) : super(key: key);
   @override

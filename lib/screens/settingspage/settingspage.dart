@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage ({Key key}) : super(key: key);
+  const SettingsPage ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,13 +37,13 @@ class SettingsPage extends StatelessWidget {
 }
 
 class DropDownList extends StatefulWidget {
-  DropDownList({Key key}) : super(key: key);
+  DropDownList({Key? key}) : super(key: key);
   @override
   _DropDownListState createState() => _DropDownListState();
 }
 
 class _DropDownListState extends State<DropDownList> {
-  String dropdownvalue = 'English';
+  String? dropdownvalue = 'English';
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class _DropDownListState extends State<DropDownList> {
         height:3,
         color: Colors.blueAccent,
       ),
-      onChanged: (String newValue){
+      onChanged: (String? newValue){
         setState(() {
           dropdownvalue = newValue;
         });
@@ -73,40 +73,4 @@ class _DropDownListState extends State<DropDownList> {
     );
   }
 }
-
-// List<DropdownMenuItem<String>> get dropdownItems{
-//   List<DropdownMenuItem<String>> menuItems = [
-//     DropdownMenuItem(child: Text("USA"),value: "USA"),
-//     DropdownMenuItem(child: Text("Canada"),value: "Canada"),
-//     DropdownMenuItem(child: Text("Brazil"),value: "Brazil"),
-//     DropdownMenuItem(child: Text("England"),value: "England"),
-//   ];
-//   return menuItems;
-// }
-//
-// class _DropdownItemState extends State<DropdownItem> {
-//   String selectedValue = "USA";
-//   @override
-//   Widget build(BuildContext context) {
-//     return DropdownButton(
-//         value: selectedValue,
-//         items: dropdownItems
-//     );
-//   }
-// }
-//
-// class DropdownItem extends StatefulWidget {
-//   const DropdownItem({Key? key}) : super(key: key);
-//
-//   @override
-//   _DropdownItemState createState() => _DropdownItemState();
-// }
-//
-// class _DropdownItemState extends State<DropdownItem> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container();
-//   }
-// }
-
 

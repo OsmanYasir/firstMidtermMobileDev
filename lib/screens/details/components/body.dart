@@ -5,9 +5,9 @@ import 'package:electronics_parts_store/models/product.dart';
 
 
 class Body extends StatelessWidget {
-  final Product product;
+  final Product? product;
 
-  const Body({Key key, this.product}) : super(key: key);
+  const Body({Key? key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     // It provide us total height and width
@@ -21,9 +21,9 @@ class Body extends StatelessWidget {
               children: <Widget>[
                 ProductTitleWithImage(product: product),
                 Container(
-                  child: Text("Product: "+ product.title + "\n"
-                               "Amount: " + product.amount.toString()+ "\n"
-                               "Price: " + product.price.toString()+ "\n"
+                  child: Text("Product: "+ product!.title! + "\n"
+                               "Amount: " + product!.amount.toString()+ "\n"
+                               "Price: " + product!.price.toString()+ "\n"
                                   ),
                   margin: EdgeInsets.only(top: size.height * 0.35),
                   padding: EdgeInsets.only(
@@ -31,26 +31,6 @@ class Body extends StatelessWidget {
                     left: defaultPaddin,
                     right: defaultPaddin,
                   ),)
-                //   // height: 500,
-                //   decoration: BoxDecoration(
-                //     color: Colors.white,
-                //     borderRadius: BorderRadius.only(
-                //       topLeft: Radius.circular(24),
-                //       topRight: Radius.circular(24),
-                //     ),
-                //   ),
-                //   child: Column(
-                //     children: <Widget>[
-                //       ColorAndSize(product: product),
-                //       SizedBox(height: kDefaultPaddin / 2),
-                //       Description(product: product),
-                //       SizedBox(height: kDefaultPaddin / 2),
-                //       CounterWithFavBtn(),
-                //       SizedBox(height: kDefaultPaddin / 2),
-                //       AddToCart(product: product)
-                //     ],
-                //   ),
-                // ),
 
               ],
             ),

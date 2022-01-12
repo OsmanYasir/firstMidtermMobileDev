@@ -5,10 +5,10 @@ import '../../../constants.dart';
 
 
 class ItemCard extends StatelessWidget {
-  final Product product;
-  final Function press;
+  final Product? product;
+  final Function? press;
   const ItemCard({
-    Key key,
+    Key? key,
     this.product,
     this.press,
   }) : super(key: key);
@@ -16,7 +16,7 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: press,
+      onTap: press as void Function()?,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -31,8 +31,8 @@ class ItemCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Hero(
-                tag: "${product.id}",
-                child: Image.asset(product.image),
+                tag: "${product!.id}",
+                child: Image.asset(product!.image!),
               ),
             ),
           ),
@@ -40,11 +40,11 @@ class ItemCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: defaultPaddin / 4),
             child: Text(
               // products is out demo list
-              product.title,
+              product!.title!,
             ),
           ),
           Text(
-            "\$${product.price}",
+            "\$${product!.price}",
             style: TextStyle(fontWeight: FontWeight.bold),
           )
         ],

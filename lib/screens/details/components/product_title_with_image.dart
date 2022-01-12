@@ -13,11 +13,11 @@ import '../../../constants.dart';
 class ProductTitleWithImage extends StatelessWidget {
   @override
   ProductTitleWithImage({
-    Key key,
-    @required this.product,
+    Key? key,
+    required this.product,
   }) : super(key: key);
 
-  final Product product;
+  final Product? product;
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.symmetric(
@@ -32,7 +32,7 @@ class ProductTitleWithImage extends StatelessWidget {
                 width: 300.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(product.image),
+                    image: AssetImage(product!.image!),
                     fit: BoxFit.fill,
                   ),
                   shape: BoxShape.circle,

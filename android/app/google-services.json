@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "318789641159",
+    "project_id": "electronics-parts-store",
+    "storage_bucket": "electronics-parts-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318789641159:android:77c41100bf02866b032fe2",
+        "android_client_info": {
+          "package_name": "com.weeg.electronics_parts_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318789641159-e0c91ognp5b242c6vpb1ttmo4c3pva1k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUTk0bx5yJjwBZw_8fG4LQwqFAdUeZo1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318789641159-e0c91ognp5b242c6vpb1ttmo4c3pva1k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
